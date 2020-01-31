@@ -14,7 +14,7 @@ public:
         return this->m_keys.empty();
     }
 
-    size_type size() const
+    size_t size() const
     {
         return this->m_keys.size();
     }
@@ -52,7 +52,7 @@ public:
     }
 
 protected:
-    std::queue<K, std::list> m_keys;
+    std::queue<K, std::list<K>> m_keys;
     std::unordered_map<K, V> m_map;
 };
 

@@ -12,4 +12,11 @@ void pop();
 value_type &operator[](const key_type &key);
 ```
 
-*The source code has not been tested yet*
+A small test can be done with below script
+```bash
+mkdir build
+cd build
+cmake ../test
+make
+./Test_Hash_Queue
+```
