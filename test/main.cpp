@@ -2,6 +2,7 @@
 #include "hashable-queue.hpp"
 #include <string>
 #include <cstdlib>
+#include <exception>
 
 using namespace std;
 
@@ -46,6 +47,18 @@ int main()
     cout << "q.size(): " << q.size() << endl;
     cout << "q.front()=" << q.front() << endl;
     cout << "q.back()=" << q.back() << endl;
+
+    int x = 0;
+    try
+    {
+        cout << "q.at(ccc)=" << q.at("ccc") << endl;
+        x = q.at("xxx");
+        cout << "q.at(xxx)=" << x << endl;
+    }
+    catch (exception &e)
+    {
+        cout << "Exception: " << e.what() << endl;
+    }
 
     return EXIT_SUCCESS;
 }

@@ -51,6 +51,11 @@ public:
         return v;
     }
 
+    V &at(const K &k)
+    {
+        return this->m_map.at(k);
+    }
+
 protected:
     std::queue<K, std::list<K>> m_keys;
     std::unordered_map<K, V> m_map;
